@@ -11,7 +11,6 @@ function Header() {
             <li><a href="/#">Skills</a></li>
             <li><a href="/#">Academics</a></li>
             <li><a href="/#">Contact</a></li>
-            
           </ul>
         </nav>
         {/* <span className="cv-link line-before"><a href="/#">Download CV</a></span> */}
