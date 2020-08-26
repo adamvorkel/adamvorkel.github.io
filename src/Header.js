@@ -7,10 +7,10 @@ function Header() {
         {/* <img src={logo} className="App-logo" alt="logo" /> */} 
         <nav className="App-nav">
           <ul>
-            <li><a href="/#">About</a></li>
-            <li><a href="/#">Skills</a></li>
-            <li><a href="/#">Academics</a></li>
-            <li><a href="/#">Contact</a></li>
+            <li><a href="/#About">About</a></li>
+            <li><a href="/#Skills">Skills</a></li>
+            <li><a href="/#Academics">Academics</a></li>
+            <li><a href="/#Contact">Contact</a></li>
           </ul>
         </nav>
         {/* <span className="cv-link line-before"><a href="/#">Download CV</a></span> */}
