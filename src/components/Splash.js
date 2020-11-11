@@ -31,8 +31,7 @@ const Splash = (props) => {
         <section className="splash dark App-section">
           <div className="splash-content container">
               <div className="section-heading">
-                <span className="tag line-before">Adam Vorkel</span>
-                <h1>Full-Stack <br/>Developer</h1>
+                <h1>Hi, I'm Adam.</h1>
               </div>
               
               <div className="content line-before">

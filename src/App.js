@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect } from "react";
 // import logo from './logo.svg';
 // import Loader from './Loader';
-import Header from './Header';
-import Splash from './Splash';
+import Header from './components/Header';
+import Splash from './components/Splash';
 import About from './About';
 import Skills from './Skills';
 import Academics from './Academics';
@@ -13,6 +13,8 @@ import './App.css';
 // import { TimelineMax, gsap } from 'gsap';
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
+
+
 
 function App() {
 
@@ -49,7 +51,7 @@ function App() {
   return (
     
     <div className="App">
-      {/* <div className="App-background"></div> */}
+      <div className="App-background"></div>
       {/* <Loader /> */}
       <Header />
       <Splash links={social_media_links} />
