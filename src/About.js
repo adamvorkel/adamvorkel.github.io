@@ -46,7 +46,6 @@ const About = () => {
                         <ul>
                             <li>Name: Adam Vorkel</li>
                             <li>Age: 26</li>
-                            <li>From: Gauteng, South Africa</li>
                         </ul>
                     </div>
 
