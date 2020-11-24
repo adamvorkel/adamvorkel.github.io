@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-// import logo from './logo.svg';
 // import Loader from './Loader';
-import Header from './components/Header';
-import Splash from './components/Splash';
-import About from './About';
-import Skills from './Skills';
-import Academics from './Academics';
-import Contact from './Contact';
+import Header from './components/header/Header';
+import Splash from './components/sections/Splash';
+import About from './components/sections/About';
+import Skills from './components/sections/Skills';
+import Academics from './components/sections/Academics';
+import Contact from './components/sections/Contact';
 import './App.css';
 
 // gsap stuff
@@ -14,10 +13,7 @@ import './App.css';
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.registerPlugin(ScrollTrigger);
 
-
-
-function App() {
-
+const App = () => {
   const social_media_links = [
     { name: 'Github', url: 'https://github.com/adamvorkel' },
     { name: 'Linkedin', url: 'https://www.linkedin.com/in/adamvorkel/' },

@@ -17,7 +17,8 @@
 :root {
   --heading-font: 'Nunito Sans', sans-serif;
   --main-font: 'Nunito Sans', sans-serif;
-  --text-color: #414141;
+  --heading-color: #fff;
+  --text-color: #b7c0cd;
   --bg-mid: #0b468d;
   --bg-dark: #0c0f13;
   --bg-light: #f6f6f6;
@@ -27,10 +28,19 @@
   --font-weight-black: 900;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: var(--main-font);
   color: var(--text-color);
   overflow-x: hidden;
+  margin: 0;
+  line-height: 1.75em;
+  font-size: 16px;
 }
 
 h1,
@@ -42,15 +52,15 @@ h6 {
   font-family: var(--heading-font);
   font-weight: var(--font-weight-bold);
   color: var(--heading-color);
-  letter-spacing: -0.05em;
-  line-height: 1em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  letter-spacing: -0.025em;
+  line-height: 1.25em;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
 }
 
 p {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .section-heading h1,
@@ -61,7 +71,7 @@ p {
 @media (min-width: 768px) {
   .section-heading h1,
   .section-heading h2 {
-    font-size: 7.5rem;
+    font-size: 5rem;
   }
 }
 
@@ -84,51 +94,10 @@ hr {
   font-size: 1.25em;
 }
 
-.container {
-  width: 100%;
-  max-width: 1400px;
-  padding: 0 3em;
-  margin: 0 auto;
-}
-
-.App-section {
-  min-height: 100vh;
-  display: grid;
-  padding-top: 4.5rem;
-  padding-bottom: 4.5rem;
-  position: relative;
-  overflow: hidden;
-  align-items: center;
-}
-
 /* .dark {
   --heading-color: #fff;
   --text-color: #f2f2f2;
 } */
-
-.line-before {
-  position: relative;
-  padding-left: 4em;
-}
-
-.line-before::before {
-  content: '';
-  position: absolute;
-  top: calc(50% - 1px);
-  left: 0;
-  display: inline-block;
-  width: 2rem;
-  height: 1em;
-  border-top: 1px solid;
-}
-
-.line-before.long {
-  padding-left: 8em;
-}
-
-.line-before.long::before {
-  width: 5rem;
-}
 
 /*
 * Preloader 
@@ -174,74 +143,6 @@ hr {
   }
 }
 
-/*
-* Splash 
-*/
-
-.splash {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: red;
-}
-
-.splash .splash-content {
-}
-
-.splash .splash-content .content {
-  max-width: 28em;
-  font-size: 1.25em;
-  margin-left: 2em;
-  font-weight: 300;
-}
-
-.splash .content.line-before::before {
-  transform: rotate(90deg);
-  transform-origin: top;
-}
-
-.splash .splash-footer {
-  grid-row: 3/4;
-  align-self: flex-end;
-  font-family: var(--heading-font);
-  color: var(--text-color);
-}
-
-@media (min-width: 576px) {
-  .splash .splash-footer {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .splash .splash-footer .hire-me {
-    text-align: right;
-  }
-}
-
-.splash .splash-footer div .tag {
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-.splash .splash-footer div p {
-  margin: 0;
-}
-
-.splash .scroll-prompt {
-  position: absolute;
-  bottom: 0;
-  left: 4.5rem;
-  transform: rotate(-90deg) translateX(0%);
-  line-height: 0;
-  transform-origin: left;
-  font-family: var(--heading-font);
-  color: var(--text-color);
-  letter-spacing: 0.35rem;
-  text-transform: uppercase;
-  font-size: 0.85em;
-}
-
 .social-links ul {
   list-style-type: none;
   padding: 0;
@@ -250,29 +151,17 @@ hr {
 
 .social-links ul li a {
   padding: 1em;
-  font-size: 0.85em;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
+  font-size: 0.875em;
   font-family: var(--heading-font);
-}
-
-@media (max-width: 767px) {
-  .splash .scroll-prompt {
-    display: none;
-  }
+  color: var(--heading-color);
 }
 
 @media (min-width: 768px) {
-  .splash {
-    padding-left: 4.5em;
-    padding-right: 4.5em;
-  }
-
   .social-links {
     position: absolute;
     bottom: 3em;
-    transform: rotate(-90deg) translateY(-100%) translateX(100%);
     right: 3em;
+    transform: rotate(90deg);
     transform-origin: right;
   }
 
@@ -281,29 +170,6 @@ hr {
   }
 
   .social-links ul li + li {
-    margin-left: 2em;
+    margin-left: 1em;
   }
-}
-
-/*
-* About 
-*/
-.about {
-}
-
-/*
-* Skills 
-*/
-
-/*
-* Academics 
-*/
-
-.academics {
-}
-
-/**
-* Contact
-*/
-.contact {
 }

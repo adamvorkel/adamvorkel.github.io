@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { gsap } from 'gsap';
 
+import MenuIcon from './MenuIcon';
+ 
 const Nav = styled.nav`
     position: fixed;
     top: 0;
@@ -30,53 +32,45 @@ const Nav = styled.nav`
             padding: 0.5em;
             font-size: 2em;
             display: block;
-            font-weight: var(--font-weight-bold);
-            // letter-spacing: 0.35em;
-            // text-transform: uppercase;
         }
     }
 `
 
-const CloseBtn = styled.button`
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    z-index: 100;
-`;
-
 const Navigation = () => {
     const nav = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
+    const tl = useRef(null);
 
     useEffect(() => {
-        gsap.set(nav.current, {opacity: 0});
+        const listItems = nav.current.getElementsByTagName("li");
+        gsap.set(nav.current, {opacity: 0, display: 'none'});
+        tl.current = gsap.timeline({ paused: true });
+        tl.current
+            .set(nav.current, {display: 'flex'})
+            .to(nav.current, {opacity: 1, duration: 0.2})
+            .fromTo(listItems, 
+                {x: -100, opacity: 0}, 
+                {x: 0, opacity: 1, stagger: 0.1, duration: 0.4, ease: "power2.inOut"},
+                "-=0.4"
+                )
     }, []);
 
+
     const handleClick = () => {
-        const listItems = nav.current.getElementsByTagName("li");
-        console.log(listItems)
         if(isOpen) {
             // close
             setIsOpen(false);
-            gsap.to(nav.current, {opacity: 0});
-            // gsap.to(listItems, {y: -100, stagger: 0.1});
-            
-            
+            tl.current.reverse();
         } else {
-            setIsOpen(true);
             // open
-            gsap.to(nav.current, {opacity: 1});
-            // gsap.to(listItems, {y: 0, stagger: 0.1})
-            gsap.fromTo(listItems, 
-                {y: 100, opacity: 0}, 
-                {y: 0, opacity: 1, stagger: 0.1, duration: 0.6, ease: "power2.inOut"}
-            );
+            setIsOpen(true);
+            tl.current.play();
         }
     }
 
     return (
         <>
-        <CloseBtn onClick={handleClick}>{isOpen ? 'Close': 'Open'}</CloseBtn>
+        <MenuIcon onClick={handleClick} />
         <Nav ref={nav}>
             <ul>
                 <li><a href="/#About">About</a></li>
