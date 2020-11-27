@@ -60,6 +60,11 @@ h6 {
   margin-bottom: 0.5em;
 }
 
+h3 {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+}
+
 p {
   margin-top: 1rem;
   margin-bottom: 1rem;

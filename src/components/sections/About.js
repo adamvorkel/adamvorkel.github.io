@@ -10,16 +10,11 @@ import Tag from '../styled/Tag';
 const AboutContent = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
   gap: 1rem;
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr 2fr;
     gap: 3rem;
   }
-`;
-
-const AboutTag = styled(Tag)`
-  
 `;
 
 const AboutTitle = styled.h2`
@@ -66,7 +61,7 @@ const About = () => {
     return (
         <Section>
           <Container>
-            <AboutTag className='line-after'>About</AboutTag>
+            <Tag>About</Tag>
             <AboutContent>
                 <AboutTitle>I believe in constantly learning and improving...</AboutTitle>
                 <AboutStory>
