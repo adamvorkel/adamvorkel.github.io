@@ -38,6 +38,7 @@ const Nav = styled.nav`
 
 const Navigation = () => {
     const nav = useRef(null);
+    const btn = useRef(null);
     const [isOpen, setIsOpen] = useState(false);
     const tl = useRef(null);
 
@@ -56,21 +57,24 @@ const Navigation = () => {
     }, []);
 
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        console.log(btn.current)
         if(isOpen) {
             // close
             setIsOpen(false);
+            btn.current.classList.remove('poopi')
             tl.current.reverse();
         } else {
             // open
             setIsOpen(true);
+            btn.current.classList.add('poopi')
             tl.current.play();
         }
     }
 
     return (
         <>
-        <MenuIcon onClick={handleClick} />
+        <MenuIcon ref={btn} onClick={handleClick} />
         <Nav ref={nav}>
             <ul>
                 <li><a href="/#About">About</a></li>

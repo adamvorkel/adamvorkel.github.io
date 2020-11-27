@@ -23,6 +23,7 @@
   --bg-dark: #0c0f13;
   --bg-light: #f6f6f6;
   --gap: 3em;
+  --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --font-weight-black: 900;
@@ -36,11 +37,12 @@
 
 body {
   font-family: var(--main-font);
+  font-weight: var(--font-weight-light);
+  font-size: 18px;
   color: var(--text-color);
   overflow-x: hidden;
   margin: 0;
-  line-height: 1.75em;
-  font-size: 16px;
+  line-height: 1.62em;
 }
 
 h1,
@@ -50,12 +52,12 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-light);
   color: var(--heading-color);
   letter-spacing: -0.025em;
-  line-height: 1.25em;
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
+  line-height: 1.1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 p {

@@ -44,23 +44,20 @@ const Splash = (props) => {
 
     const Heading = styled.h1`
       margin-top: 0;
-      font-size: 5.5rem;
+      font-size: 5rem;
     `;
 
     const Tag = styled.span`
       color: #fff;
-      // font-size: 0.875em;
-      // text-transform: uppercase;
-      // font-weight: 400;
-      // letter-spacing: 0.2em;
+      font-style: italic;
     `;
 
 
     return (
         <Section>
           <Container>
-              <Heading>Hi, I'm Adam.</Heading>
-              <Tag>Software Engineer | Fullstack Developer</Tag>
+              <Heading>Hi, I'm Adam, and I'm a Software Engineer / Fullstack Developer.</Heading>
+              <Tag>Currently based in Cape Town, South Africa</Tag>
               </Container>
           
 
