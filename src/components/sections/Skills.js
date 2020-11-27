@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from 'styled-components';
+import { gsap } from 'gsap';
 
 import Container from '../styled/Container';
 import Section from '../styled/Section';
 import Tag from '../styled/Tag';
+
 
 const SkillsContent = styled.div`
   display: grid;
@@ -28,16 +30,49 @@ const SkillCategory = styled.div`
   }
   ul {
       list-style: none;
+      font-size: 0.78em;
   }
 `;
 
 const Skills = () => { 
+    const blocks = useRef([]);
+
+    useEffect(() => {
+        gsap.fromTo(
+            blocks.current, 
+            {
+                opacity: 0, 
+                y: '50%',
+            }, 
+            {
+                opacity: 1, 
+                y: '0%',
+                stagger: 0.1, 
+                scrollTrigger: 
+                {
+                    trigger: '#Skills', 
+                    // start: '-=50% 75%', 
+                    // end: '50% 75%',
+                    scrub: 1,
+                    pin: true,
+                    // markers: true,
+                }
+            }
+        )
+    }, []);
+
+    const addToRefs = (el) => {
+        if(el && !blocks.current.includes(el)) {
+            blocks.current.push(el);
+        }
+    }
+
     return (
-        <Section>
+        <Section id="Skills">
             <Container>
                 <SkillsTag>Skills</SkillsTag>
                 <SkillsContent>
-                    <SkillCategory>
+                    <SkillCategory ref={addToRefs}>
                         <h3>Backend</h3>
                         <ul>
                             <li>Node.js</li>
@@ -47,7 +82,7 @@ const Skills = () => {
                             <li>Databases (SQL, MongoDB)</li>
                         </ul>
                     </SkillCategory>
-                    <SkillCategory>
+                    <SkillCategory ref={addToRefs}>
                         <h3>Frontend</h3>
                         <ul>
                             <li>HTML(5)</li>
@@ -57,7 +92,7 @@ const Skills = () => {
                             <li>Bootstrap</li>
                         </ul>
                     </SkillCategory>
-                    <SkillCategory>
+                    <SkillCategory ref={addToRefs}>
                         <h3>Tools</h3>
                         <ul>
                             <li>Git</li>

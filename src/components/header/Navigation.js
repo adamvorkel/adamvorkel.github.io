@@ -62,12 +62,12 @@ const Navigation = () => {
         if(isOpen) {
             // close
             setIsOpen(false);
-            btn.current.classList.remove('poopi')
+            btn.current.classList.remove('cross')
             tl.current.reverse();
         } else {
             // open
             setIsOpen(true);
-            btn.current.classList.add('poopi')
+            btn.current.classList.add('cross')
             tl.current.play();
         }
     }
@@ -80,6 +80,7 @@ const Navigation = () => {
                 <li><a href="/#About">About</a></li>
                 <li><a href="/#Skills">Skills</a></li>
                 <li><a href="/#Academics">Academics</a></li>
+                <li><a href="/#Portfolio">Portfolio</a></li>
                 <li><a href="/#Contact">Contact</a></li>
             </ul>
         </Nav>

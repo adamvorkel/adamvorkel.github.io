@@ -9,15 +9,22 @@ const ContactContent = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-  }
 `;
 
 const ContactTitle = styled.h2`
   margin-top: 3rem;
-  font-size: 5rem;
+  font-size: 6.25rem;
+`;
+
+const ContactDetails = styled.div`
+  font-size: 0.78em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+  }
 `;
 
 const SocialLinks = styled.ul`
@@ -26,25 +33,29 @@ const SocialLinks = styled.ul`
 
 const Contact = ({ links }) => {
     return (
-        <Section>
+        <Section id="Contact">
           <Container>
             <Tag>Contact</Tag>
             <ContactContent>
-              <ContactTitle>Get in touch</ContactTitle>
-              <div>
+            <ContactTitle>Feel free to contact me at any time.</ContactTitle>
+              <ContactDetails>
+                <div>
                 <h3>Contact details</h3>
                 <p>082 465 3228<br /> adamvorkel@gmail.com</p>
-              </div>
-              <div>
+                </div>
+                <div>
                 <h3>Address</h3>
                 <p>Bluebell Way<br /> Cape Town, 7560<br /> Western Cape, South Africa</p>
-              </div>
-              <div>
-                <h3>Links</h3>
+                </div>
+
+                <div><h3>Links</h3>
                 <SocialLinks>
                 {links.map(l => <li><a href={l.url} key={l.name} target="_blank" rel="noopener noreferrer">{l.name}</a></li>)}
-                </SocialLinks>
-              </div>
+                </SocialLinks></div>
+
+              </ContactDetails>
+              
+              
             </ContactContent>
           </Container>
         </Section>

@@ -15,23 +15,25 @@ const MenuIcon = styled.button`
 
 const Line = styled.span`
     display: block;
-    border-top: 1px solid #fff;
-    width: 2.25rem;
-    transition: all 0.3s ease-in-out;
+    width: 3rem;
+    transition: all 0.2s ease-in-out;
+    height: 1px;
+    background-color: #fff;
     &::after {
         content: '';
-        width: 1.5rem;
-        margin-top: 0.75rem;
+        width: 2rem;
+        height: 1px;
+        margin-top: 1rem;
         display: block;
-        border-top: 1px solid #fff;
-        transition: all 0.3s ease-in-out;
+        background-color: #fff;
+        transition: all 0.2s ease-in-out;
     }
-    ${MenuIcon}.poopi & {
+    ${MenuIcon}.cross & {
         transform: rotate(45deg)
     }
-    ${MenuIcon}.poopi &::after {
+    ${MenuIcon}.cross &::after {
         transform: rotate(-90deg);
-        width: 2.25rem;
+        width: 100%;
         margin-top: 0;
     }
 `;

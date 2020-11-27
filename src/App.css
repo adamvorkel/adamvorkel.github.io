@@ -18,15 +18,18 @@
   --heading-font: 'Nunito Sans', sans-serif;
   --main-font: 'Nunito Sans', sans-serif;
   --heading-color: #fff;
-  --text-color: #b7c0cd;
+  --text-color: #fff;
   --bg-mid: #0b468d;
-  --bg-dark: #0c0f13;
-  --bg-light: #f6f6f6;
+  --bg-dark: #121212;
+  --bg-light: #070022;
+  --color-accent: #32e0c4;
   --gap: 3em;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --font-weight-black: 900;
+
+  font-size: 62.5%;
 }
 
 * {
@@ -38,7 +41,7 @@
 body {
   font-family: var(--main-font);
   font-weight: var(--font-weight-light);
-  font-size: 18px;
+  font-size: 1.8rem;
   color: var(--text-color);
   overflow-x: hidden;
   margin: 0;
@@ -61,7 +64,7 @@ h6 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: var(--font-weight-bold);
 }
 

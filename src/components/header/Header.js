@@ -12,7 +12,7 @@ const HeaderStyle = styled.header`
   left: 0;
   width: 100%;
   display: flex;
-  padding: 2rem;
+  padding: 3rem 3rem;
   color: #ffffff;
   z-index: 100;
   justify-content: space-between;
@@ -26,9 +26,9 @@ const Logo = styled.a`
   text-decoration: none;
   font-family: var(--heading-font);
   color: var(--text-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
-  padding: 1rem;
+  padding: 0.5em;
 `;
 
 const Header = () => {

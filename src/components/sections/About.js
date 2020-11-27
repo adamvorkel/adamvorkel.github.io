@@ -1,6 +1,4 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React from "react";
 import styled from 'styled-components';
 
 import Container from '../styled/Container';
@@ -20,7 +18,7 @@ const AboutContent = styled.div`
 const AboutTitle = styled.h2`
   grid-column: 1/3;
   margin-top: 3rem;
-  font-size: 5rem;
+  font-size: 10rem;
 `;
 
 const AboutStory = styled.div`
@@ -29,37 +27,8 @@ const AboutStory = styled.div`
 `;
 
 const About = () => {
-
-    useEffect(() => {
-        // const scroll_scene = gsap.timeline();
-        // scroll_scene
-          // .to('.App-background ', .3, {backgroundColor: '#ffffff'}, 0)
-          // .to('.splash ', .3, {opacity: 0}, 0)
-          // .fromTo('.about .tag ', .3, {opacity: 0, y: -100}, {opacity: 1, y: 0}, 0)
-          // .fromTo('.about .big-text ', .3, {opacity: 0, y: 100}, {opacity: 1, y: 0}, 0)
-          // .fromTo('.about .section-heading ', .3, {opacity: 0, x: -100}, {opacity: 1, x: 0})
-          // .fromTo('.about .story ', .3, {opacity: 0, x: 100}, {opacity: 1, x: 0});
-        // scroll_scene.fromTo('.App-background', {backgroundColor: '#111111'}, {backgroundColor: '#ffffff'})
-        // ScrollTrigger.create({
-        //     animation: scroll_scene,
-        //     trigger: '.App-background',
-        //     start: "top top",
-        //     end: "+=100%",
-        //     markers: true,
-        //     scrub: true
-        // });
-        // ScrollTrigger.create({
-            // animation: scroll_scene,
-            // trigger: '.about',
-            // start: "50% 80%",
-            // end: "+=100%",
-            // toggleActions: "play pause resume reverse",
-            // markers: true,
-        // });
-      });
-
     return (
-        <Section>
+        <Section id="About">
           <Container>
             <Tag>About</Tag>
             <AboutContent>
