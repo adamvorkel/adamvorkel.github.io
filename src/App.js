@@ -77,7 +77,6 @@ const App = () => {
   });
 
   return (
-    
     <div className="App">
       <div className="App-background"></div>
       {/* <Loader /> */}

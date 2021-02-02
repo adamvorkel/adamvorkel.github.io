@@ -25,9 +25,9 @@ const Logo = styled.a`
   line-height: 1em;
   text-decoration: none;
   font-family: var(--heading-font);
-  color: var(--text-color);
+  color: #141c3a;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: var(--font-weight-bold);
   padding: 0.5em;
 `;
 

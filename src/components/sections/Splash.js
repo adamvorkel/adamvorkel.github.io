@@ -8,29 +8,29 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #fff;
 `
 
 const Heading = styled.h1`
   margin-top: 0;
-  font-size: 10rem;
+  font-size: 4.8rem;
+  font-weight: var(--font-weight-bold);
+  color: #141c3a;
 `;
 
 const Subheading = styled.span`
-  color: #fff;
-  font-style: italic;
+  color: #141c3a;
+  font-size: 2.4rem;
 `;
 
-const Bold = styled.span`
-  font-weight: var(--font-weight-bold);
-  color: var(--color-accent)
-`;
+
 
 const Splash = (props) => {
     return (
         <Section>
             <Container>
-              <Heading>Hi, I'm <Bold>Adam</Bold>, and I'm a <br />Software Engineer / <br />Fullstack Developer.</Heading>
-              <Subheading>Currently based in Cape Town, South Africa <br/> Available for hire, view resume &gt;</Subheading>
+              <Heading>Fullstack Developer <br/> and tech enthusiast</Heading>
+              <Subheading>Currently based in Cape Town, South Africa</Subheading>
             </Container>
           
 

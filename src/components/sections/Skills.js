@@ -6,6 +6,9 @@ import Container from '../styled/Container';
 import Section from '../styled/Section';
 import Tag from '../styled/Tag';
 
+const Section1 = styled(Section)`
+    background-color: #141c3a;
+`
 
 const SkillsContent = styled.div`
   display: grid;
@@ -68,7 +71,7 @@ const Skills = () => {
     }
 
     return (
-        <Section id="Skills">
+        <Section1 id="Skills">
             <Container>
                 <SkillsTag>Skills</SkillsTag>
                 <SkillsContent>
@@ -103,7 +106,7 @@ const Skills = () => {
                     </SkillCategory>
                 </SkillsContent>
             </Container>
-        </Section>
+        </Section1>
                 
 
     );
