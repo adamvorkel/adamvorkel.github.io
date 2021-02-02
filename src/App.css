@@ -14,172 +14,31 @@
 @media (min-width: 1200px) {
 }
 
-:root {
-  --heading-font: 'Nunito Sans', sans-serif;
-  --main-font: 'Nunito Sans', sans-serif;
-  --heading-color: #fff;
-  --text-color: #fff;
-  --bg-mid: #0b468d;
-  --bg-dark: #121212;
-  --bg-light: #070022;
-  --color-accent: #32e0c4;
-  --gap: 3em;
-  --font-weight-light: 300;
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
-
-  font-size: 62.5%;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+:root {
+  --font-primary: 'Nunito Sans', sans-serif;
+  font-size: 62.5%;
+}
+
 body {
-  font-family: var(--main-font);
-  font-weight: var(--font-weight-light);
+  font-family: var(--font-primary);
   font-size: 1.8rem;
-  color: var(--text-color);
   overflow-x: hidden;
   margin: 0;
   line-height: 1.62em;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--heading-font);
-  font-weight: var(--font-weight-light);
-  color: var(--heading-color);
-  letter-spacing: -0.025em;
-  line-height: 1.1em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: var(--font-weight-bold);
-}
-
-p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.section-heading h1,
-.section-heading h2 {
-  font-size: 4.5rem;
-}
-
-@media (min-width: 768px) {
-  .section-heading h1,
-  .section-heading h2 {
-    font-size: 5rem;
-  }
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-b {
-  font-weight: 500;
-}
-
-hr {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  border: 1px solid var(--text-color);
-}
-
-.text-lg {
-  font-size: 1.25em;
-}
-
-/* .dark {
-  --heading-color: #fff;
-  --text-color: #f2f2f2;
-} */
-
-/*
-* Preloader 
-*/
-.App-preloader {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
   display: flex;
-  justify-content: center;
+  height: 100vh;
   align-items: center;
-  z-index: 200;
-  background-color: var(--bg-dark);
+  justify-content: center;
 }
 
-/*
-* Background 
-*/
-
-.App-background {
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--bg-dark);
-  position: fixed;
-  display: flex;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
-
-@media (min-width: 768px) {
-  .App-header {
-    align-items: flex-start;
-    flex-flow: row;
-  }
-
-  .App-logo {
-    margin-bottom: 0;
-  }
-
-  .App-nav {
-    margin-left: auto;
-  }
-}
-
-.social-links ul {
-  list-style-type: none;
-  padding: 0;
+h1 {
   margin: 0;
-}
-
-.social-links ul li a {
-  padding: 1em;
-  font-size: 0.875em;
-  font-family: var(--heading-font);
-  color: var(--heading-color);
-}
-
-@media (min-width: 768px) {
-  .social-links {
-    position: absolute;
-    bottom: 3em;
-    right: 3em;
-    transform: rotate(90deg);
-    transform-origin: right;
-  }
-
-  .social-links ul {
-    display: flex;
-  }
-
-  .social-links ul li + li {
-    margin-left: 1em;
-  }
+  font-weight: 900;
 }
