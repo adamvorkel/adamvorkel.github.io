@@ -1,0 +1,2 @@
+(this["webpackJsonpadamvorkel.github.io"]=this["webpackJsonpadamvorkel.github.io"]||[]).push([[0],{3:function(e,t,n){e.exports=n(9)},8:function(e,t,n){},9:function(e,t,n){"use strict";n.r(t);var o=n(0),r=n.n(o),a=n(2),u=n.n(a),c=(n(8),function(){return r.a.createElement("h1",null,"Site under construction...")});u.a.render(r.a.createElement(r.a.StrictMode,null,r.a.createElement(c,null)),document.getElementById("root"))}},[[3,1,2]]]);
+//# sourceMappingURL=main.d0975dc3.chunk.js.map
